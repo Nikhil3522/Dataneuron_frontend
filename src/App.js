@@ -15,7 +15,7 @@ function App() {
 
   // This function fetch the value
   const getData = () => {
-    fetch("http://localhost:8000/data")
+    fetch("https://dataneuron-backend-9hp3.onrender.com/data")
       .then((res) => res.json())
       .then((json) => {
         setData(json.data.value);
@@ -24,7 +24,7 @@ function App() {
 
   // This funciton fetch the count value
   const getCount = () => {
-    fetch("http://localhost:8000/count")
+    fetch("https://dataneuron-backend-9hp3.onrender.com/count")
       .then((res) => res.json())
       .then((json) => {
         setCount(json.data.count);
@@ -39,7 +39,7 @@ function App() {
       body: JSON.stringify({ value: inputData })
     }
 
-    fetch('http://localhost:8000/add', requestOptions)
+    fetch('https://dataneuron-backend-9hp3.onrender.com/add', requestOptions)
       .then(response => response.json())
       .then(data => {
         setData(inputData);
@@ -56,7 +56,7 @@ function App() {
       body: JSON.stringify({ value: inputData })
     }
 
-    fetch('http://localhost:8000/update', requestOptions)
+    fetch('https://dataneuron-backend-9hp3.onrender.com/update', requestOptions)
       .then(response => response.json())
       .then(data => {
         setData(inputData);
